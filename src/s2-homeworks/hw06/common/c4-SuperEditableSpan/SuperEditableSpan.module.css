@@ -1,11 +1,20 @@
 .spanBlock {
+
 }
 
 .span {
+
 }
 
 .input {
 }
 
 .pen {
+    margin-right: 5px;
+}
+
+.defaultText {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0, 128, 255, 1);
 }

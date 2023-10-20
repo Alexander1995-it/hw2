@@ -1,5 +1,11 @@
 .buttonsContainer {
 }
 
-.editableSpanContainer {
+.buttonSave {
+    margin-right: 10px;
 }
+
+.editableSpanContainer {
+    margin-bottom: 15px;
+}
+
