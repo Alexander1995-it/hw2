@@ -1,7 +1,9 @@
+* {
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
 .App {
-    --header_height: 60px;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .hw {
