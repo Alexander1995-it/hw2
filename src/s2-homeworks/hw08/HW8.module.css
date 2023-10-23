@@ -5,16 +5,40 @@
 }
 
 .users {
+   width: 100%;
+    font-family: Roboto;
+    border-collapse: collapse;
+    padding: 110px;
+
 }
 
 .buttonsContainer {
+    margin-bottom: 10px;
+}
+
+.buttonsContainer button:not(:last-child) {
+    margin-right: 10px;
 }
 
 .container {
+    width: 606px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .thead {
+    background-color: lightgray;
+    font-weight: 600;
 }
+.users td{
+    padding: 10px;
+}
+
+.users tbody tr:not(:last-child){
+    border-bottom: 1px solid #E5E5E5;
+}
+
 
 .nameCol {
 }
