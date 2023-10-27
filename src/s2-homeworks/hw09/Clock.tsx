@@ -15,22 +15,18 @@ function Clock() {
             setDate(new Date(restoreState('hw9-date', Date.now())))
         })
         setTimerId(+id)
-        setShow(true)
     }
 
     const stop = () => {
         window.clearInterval(timerId)
-        // setTimerId(undefined)
-        setShow(false)
-        // пишут студенты // поставить часы на паузу, обнулить ид таймера (timerId <- undefined)
-
+        setTimerId(undefined)
     }
 
     const onMouseEnter = () => { // пишут студенты // показать дату если наведена мышка
-
+        setShow(true)
     }
     const onMouseLeave = () => { // пишут студенты // спрятать дату если мышка не наведена
-
+        setShow(false)
     }
 
     const stringTime = `${date.getHours().toString().length === 1 ? `0${date.getHours()}` : date.getHours()}:${date.getMinutes().toString().length === 1 ? `0${date.getMinutes()}` : date.getMinutes()}: ${date.getSeconds().toString().length === 1 ? `0${date.getSeconds()}` : date.getSeconds()} ` ||
@@ -43,7 +39,7 @@ function Clock() {
         month: "long",
     });
     const stringMonth = formatterMonth.format(date) || <br/> // пишут студенты
-    console.log(formatterMonth.format(date))
+
     return (
         <div className={s.clock}>
             <div
@@ -76,14 +72,14 @@ function Clock() {
             <div className={s.buttonsContainer}>
                 <SuperButton
                     id={'hw9-button-start'}
-                    disabled={show}
+                    disabled={!!timerId}
                     onClick={start}
                 >
                     start
                 </SuperButton>
                 <SuperButton
                     id={'hw9-button-stop'}
-                    disabled={!show} // пишут студенты // задизэйблить если таймер не запущен
+                    disabled={!timerId} // пишут студенты // задизэйблить если таймер не запущен
                     onClick={stop}
                 >
                     stop
